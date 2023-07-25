@@ -60,6 +60,12 @@
         let someone = {...person1}
         console.log(someone)//  {"name": "Amy","age": 15}
 
+        //2 合并对象
+        let age1 = {age:15}
+        let name1 = {name:"Amy"}
+        let person2 = {name:"zhangsan"}
+        person2 = {...age1,...name1}
+        console.log(person2)
     </script>
 
 </body>
