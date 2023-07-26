@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li>西游记；价格：{{xyjPrice}} ，数量：<input type="number" v-model="xyjNum"> </li>
+            <li>红楼梦；价格：{{hlmPrice}}，数量： <input type="number" v-model="hlmNum"></li>
+            <li>总价：{{totalPrice}}</li>
+            {{msg}}
+        </ul>
+
+        <script src="../node_modules/vue/dist/vue.js"></script>
+
+        <script>
+            new Vue({
+                el:"#app",
+                data:{
+                    xyjPrice: 99.98,
+                    hlmPrice: 100.00,
+                    xyjNum: 1,
+                    hlmNum: 1,
+                    msg:""
+                },
+                computed: {
+                    totalPrice() {
+                        return  this.xyjNum*this.xyjPrice+this.hlmNum*this.hlmPrice
+                    }
+                },
+                watch:{
+                    xyjNum(newVal, oldVal) {
+                        // alert("newVal"+newVal+"==>oldVal"+oldVal)
+                        if(newVal>=3){
+                            this.msg="库存超过限制";
+                            this.xyjNum=3
+                        }else{
+                            this.msg=""
+                        }
+                    }
+                }
+            })
+        </script>
+
+    </div>
+</body>
+</html>
