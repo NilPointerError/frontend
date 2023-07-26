@@ -9,9 +9,7 @@ npm install webpack -g //全局安装webpack
 npm install --global vue-cli //安装vue-cli
 ```
 
-- 运行成功端口：
-
-![image-20230726152248559](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20230726152248559.png)
+- 运行成功端口![img](https://raw.githubusercontent.com/NilPointerError/frontend/main/image-20230726152248559.png)
 
 - 整合Vue UI框架ElementUi
 
