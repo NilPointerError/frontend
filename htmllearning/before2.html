@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type = "text/css">
+html {
+	background-image: url(static/img/yuan2.webp);
+}
+	div.loginbox {
+		
+		/*opacity: 0.3;*/
+		background-color: rgba(255,153,153,0.3);
+		padding: 40px;
+		border: 3px solid green;
+		border-radius: 5px;
+		position: absolute;
+		left: 50%;
+		top: 30%;
+		transform: translate(-50%,-50%);
+		/* //参照物是第一个	 */
+	}
+	div.loginbox label {
+		margin-right: 20px;
+	}
+	div.loginitem {
+		margin-bottom: 20px;
+	}
+	div.butbox {
+		text-align: center;	
+	}
+	div.loginbox input {
+		padding: 0 20px 0;
+		/* cursor pointer; */
+	}
+	h3 {
+	text-align: center;
+	
+	}	
+</style>
+</head>
+<body>
+	<h3>登录注册界面</h3>
+	<div class = "loginbox">
+		
+		<form action="login" method="post">
+		<div class = "loginitem">
+		<label>账号</label><input type='text' name="username">
+		</div>
+		<div class = "loginitem">
+		<label>密码</label><input type="password" name="userpass">
+		</div>
+		<div class = "butbox">
+		<input type="submit" value="登录">
+		<input type="submit" value="注册">
+		</div>
+		</form>
+	</div>
+</body>
+</html>
+
+<!-- 第一：href=‘javascript:;’
+
+    代表的是发生动作时执行一段javascript代码，但是这个代码是空的，所以什么也不执行
+第二：href = ‘’：
+
+    代表的是什么也不执行，但是用这种，动作发生之后，会刷新页面。
+第三：href=‘#’：
+
+    代表的同样是什么也不执行，但是用这种，动作发生之后，会自动跳转到页面顶端。 -->

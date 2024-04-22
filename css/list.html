@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    ul.a {
+        list-style-type: square;
+        list-style-image: url('/image/smiley.gif');
+    }
+    ol.a {
+        list-style-type: upper-alpha;
+    }
+    ul.b {
+        list-style: square url("/image/smiley.gif");
+    }
+
+    ol.b {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    /* 去除标记 */
+
+</style>
+
+
+<body>
+    <p>无序列表</p>
+    <ul class="a">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Cola</li>
+    </ul>
+    <p>无序列表</p>
+    <ul class="b">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Cola</li>
+    </ul>
+    <p>有序列表</p>
+    <ol class="a">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Cola</li>
+    </ol>
+    <p>有序列表</p>
+    <ol class="b">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Cola</li>
+    </ol>
+</body>
+</html>

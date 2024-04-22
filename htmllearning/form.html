@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head></head>
+<br>
+    <!-- 默认为get方式提交 -->
+    <form action="/" method="post"> 
+        <label for="name">用户名：</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label>性别：</label>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">男</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">女</label>
+
+        <br>
+        <input type="checkbox" id="subscribe" name="subscribe" checked>
+        <label for="subscribe">订阅推送信息</label>
+        <br>
+
+        <label for="country">国家：</label>
+        <select id="country" name="country">
+            <option value="cn">CN</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select>
+        <br>
+        <!-- 提交按钮 -->
+        <input type="submit" value="提交">
+    </form>
+
+    
+
+
+
+</body>
+</html>
