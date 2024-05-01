@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 将js编写到js文件中，外部引用
+    
+        可以利用浏览器的缓存机制
+    -->
+    
+    
+    <!-- 将js代码写到script标签中 -->
+    <script type="text/javascript">
+        
+        alert("script标签中！")
+        </script>
+<script type="text/javascript"  src="js/script.js"></script>
+
+</head>
+<body>
+    
+    <!-- js代码在标签 onclick属性中 -->
+    <button  onclick="alert('QAQ')">点我一下</button>
+
+
+    <!-- js代码在href属性中 -->
+    <a href="javascript:alert('WAW');">点我一下</a>
+
+
+    <!-- 注意：耦合度高，
+        不推荐使用 
+    -->
+</body>
+</html>

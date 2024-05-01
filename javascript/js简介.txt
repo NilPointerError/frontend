@@ -1,0 +1,9 @@
+
+
+1、JavaScript 由 ECMAScript DOM BOM组成
+
+
+2、特点
+解释性语言
+动态语言
+面向对象

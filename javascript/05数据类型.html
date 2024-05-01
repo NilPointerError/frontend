@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /**
+         *  
+         *  js有六种数据类型
+         * 
+         * String 字符串
+         * Number 数值
+         * Boolean 布尔值
+         * Null 空
+         * Undefined 未定义
+         * Object 对象
+         * 
+         * 
+         * Stirng Number Boolean Null Undefined 是基本数据类型
+         * Object 引用数据类型
+         * 
+         */
+        // 使用双引号或单引号， 转义字符 "\"
+        var str = "hello";
+        console.log(str);
+        console.log("str");
+        /**
+         * 
+         * 在js中所有数值都是Number类型
+         *  包括整数和浮点数
+         * 
+         */
+
+        var a = 123;
+        var b = "123";
+        console.log(a);
+        console.log(b);
+        // typeof 输出类型
+        console.log(typeof b);
+
+        console.log(Number.MAX_VALUE);
+        // 如果Number数字超过最大值，返回Infinity 正无穷，类型为Number
+        inf = Infinity;
+        console.log(typeof inf);
+
+        // NAN： not a number 不是一个数字，类型为Number
+        str = "abc" * "bcd";
+        str = NaN;
+        console.log(str);
+        // 大于0的最小值
+        minVal = Number.MIN_VALUE;
+        console.log(minVal);
+
+        // 浮点数计算不精确
+        var sum = 123 + 345;
+        sum = 0.1 + 0.2;
+        console.log(sum);
+
+        /**
+         * 布尔值
+         *  true false
+         * 
+         */
+        var bool = false;
+        console.log(bool);
+
+        /**
+         * Null 空对象，类型是object
+         * Undefined
+         * 声明一个变量，但不给变量赋值时，它的值和类型都是undefined
+         * 
+         */
+        var obj = null;
+        console.log(typeof obj);
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
