@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script type="text/javascript">
+
+        /**
+         * 
+         * 对象的分类：
+         *  1.内建对象
+         *    由ES标准中定义的对象，在任何ES实现中都可以使用
+         *    比如：Math String Number Boolean Function Object...
+         *  2.宿主对象
+         *    由js运行环境提供的对象，浏览器提供的对象
+         *    比如：BOM（浏览器对象模型）  DOM（文档对象模型）  
+         *      document console
+         *  3. 自定义对象 
+         *      自己创建的对象
+        */
+        // 初始化
+        var obj = new Object();
+        obj.name = "jack";
+        obj.gender = "male";
+        obj.age = 18;
+        // 删除对象的属性
+        delete obj.name;
+        console.log(obj);
+
+        // 另一种属性赋值读取方式
+        obj["123"] = 789;
+        console.log(obj["123"]);       
+        /**
+         * 使用[]这种形式操作属性更灵活
+         * 可以传递变量
+        */
+        var num = "123";
+        obj[num] = 456;
+        console.log(obj);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

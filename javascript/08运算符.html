@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        /**
+         * 运算符
+         * 
+         * 算数运算符
+         *  + - * / %
+         *  我们可以利用 - 0、* 1、 /1 进行隐式转换 
+         *  
+         * 
+         */
+        
+        /**
+         * 一元运算符，只需要一个操作数
+         * + ：类型转换为数字 
+         * - ：对数字取反 
+         * 对于非数字会先将其转换为数字
+         * 自增、自减 ++ --  
+        */
+        // 不是数字也可以做运算
+        var result = true + false;
+        console.log(result); 
+        // 字符串拼接
+        result = "hello" + "world";
+        console.log(result);
+
+        // 隐式类型转换
+        result = 123 + "";// 转为string类型
+
+        var divide = 3/2;
+        console.log(divide);//1.5
+       /**
+        * 
+        * 逻辑运算符
+        *  ！
+        *  && 
+        *  || 
+        *  
+        * 
+        * <<<在JS中可以进行非布尔值逻辑运算！！！>>>
+        * 
+        * */ 
+        // 与运算：如果都为true，则返回后边的
+        // 如果两个值中存在false，则返回靠前的false
+        result = 5 && 6;
+        console.log(result);
+        // false && true 返回 false
+        result = 0 && 2;
+        result = NaN && 0;
+        // 或运算：一个第一个值为true，则直接返回第一个值
+        // 如果第一个值为false，则返回第二个值
+
+
+        /**
+         * 赋值运算符  
+         * = 
+         * “+=”  “-=” 
+         *  
+        */
+        result += 2;
+
+        /**
+         * 关系运算符
+         * >  >=  <=
+         * 对于非数值会先将其转换为数字进行比较
+         * 
+         * 任何值和NaN做任何比较都是false
+         * 如果符号两侧都是字符串时，比较的是unicode编码
+         * 
+         * == 
+         *  大部分情况下会转换成数字
+         * 
+        */
+        console.log("1" < "5");
+       
+        console.log(true == "1");
+        // undefined 衍生自 null，结果为true
+        console.log(undefined == null);
+        // NaN不和任何值相等，可以通过isNaN()判断一个值是否是NaN
+        console.log("NaN == NaN", NaN == NaN);
+        console.log(isNaN("NaN"));
+
+        /**
+         * 
+         * === 全等
+         *  和 == 类似，但是不同的是，类型不同时直接返回false
+         *
+         * !== 不全等 同样不会进行类型转换
+         *  
+        */
+        console.log(true === "1");
+
+        /**
+         * 条件运算符也叫三元运算符，如果为非布尔值会将其先转换为布尔值
+         * 
+        */
+        var e1 = 20, e2 = 34;
+        e1 > e2 ? alert("e1") : alert("e2");
+
+    </script>
+</head>
+
+
+
+<body>
+    
+</body>
+</html>
