@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var obj = {
+            name:"zs",
+            age: 29,
+            gender:"male",
+            address:"shanghai"
+        };
+
+        function createPerson(name, age, gender, address) {
+            var obj = new Object();
+            obj.name = name;
+            obj.age = age;
+            obj.gender = gender;
+            obj.address = address;
+            return obj;
+        }        
+        var res = createPerson("ls", 20, "女", "beijing")
+        console.log(res);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

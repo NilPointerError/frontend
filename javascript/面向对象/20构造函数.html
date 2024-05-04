@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <script type="text/javascript">
+
+       /**
+        *   构造函数的执行流程：
+        *       1.创建一个新对象
+        *       2.将新建的对象设置为this
+        *       3.执行函数中的代码
+        *       4.返回新的对象
+        * */ 
+
+
+        function fun() {
+          alert("相同方法")  
+        };
+        // 使用同一个构造函数创建的对象，这个构造函数也称为类
+        function Person(name, age, gender, address) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.address = address;
+            this.sayName = fun();
+        }
+
+        var per = new Person("ls", 20, "女", "beijing");
+        console.log(per);
+
+        // 使用instance of可以检查一个对象是否是一个类的实例
+        console.log(per instanceof Person);
+
+        // 所有的对象都是Object的后代
+
+        var per1 = new Person();
+        var per2 = new Person();
+        console.log("per1.sayName == per2.sayName",per1.sayName == per2.sayName)
+
+
+    </script>
+
+<body>
+    
+</body>
+</html>

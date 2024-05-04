@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /**
+         * 
+         * 函数也是一个对象
+         *  函数中封装一些功能（代码），在需要时可以使用
+         *   
+         * 
+        */
+        /**
+         * 创建方式1：将封装的代码以字符串的形式传递给构造函数
+         * 函数中的代码只有在函数调用的时候执行
+         * 
+        */
+        //创建一个函数对象
+        var fun = new Function("console.log('第一个函数')");
+        console.log(typeof fun);// 类型 function
+        fun();
+        fun.key = "value";
+
+        //方式2：使用函数声明创建一个函数
+        function fun2() {
+            console.log("hello fun")
+        }
+        // console.log(fun2);
+        fun2();
+
+        // 方式3：使用函数表达式创建一个函数
+        var fun3 = function() {
+            console.log("hello fun expression")
+        }
+
+        // 函数参数
+        function sum(a, b) {
+            var res = a+b;
+            console.log(res);
+            return res;
+        }
+        sum(1, 2);
+        // 调用函数时解析器不会检查实参的类型
+        sum(123, "sum");
+        // 调用函数时，也不会检查实参的数量
+        sum(5, 6, true, false, 'wqfnoew');
+        // 如果实参的数量少于形参的数量，则没有对应实参的形参将是undefined
+        res = sum(123);
+        // 如果return没有值返回undefined
+        console.log("res=",res);
+
+        
+        function print(param) {
+            console.log("param="+param);
+        }
+        // 匿名函数作为实参传入
+        print(function() {alert("hello")} );
+
+        function manji(r) {
+            return r * 3.14 * r;
+        }
+        // manji 函数对象   manji()调用函数
+        print(manji(10))
+        print(manji)
+
+
+        // 函数嵌套
+        function fun4() {
+            function fun5() {
+                alert("fun5...");
+            }
+            // fun5();
+            // 返回函数对象
+            return fun5;
+        }
+        fun4()();
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
