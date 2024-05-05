@@ -16,21 +16,27 @@
         *       4.返回新的对象
         * */ 
 
-
-        function fun() {
-          alert("相同方法")  
-        };
+        // 将函数定义在全局作用域，污染了全局作用域的命名空间
+        // 定义在全局作用域中有局限性，可以添加到原型对象中
+        // function fun() {
+        //   alert("相同方法")  
+        // };
         // 使用同一个构造函数创建的对象，这个构造函数也称为类
         function Person(name, age, gender, address) {
             this.name = name;
             this.age = age;
             this.gender = gender;
             this.address = address;
-            this.sayName = fun();
+            //this.sayName = fun();
         }
 
         var per = new Person("ls", 20, "女", "beijing");
-        console.log(per);
+        per.toString = function() {
+            return "Person[name="+this.name+"]";
+        }
+        console.log(per.toString());
+        // 相当于per.toString()
+        // console.log(per);
 
         // 使用instance of可以检查一个对象是否是一个类的实例
         console.log(per instanceof Person);

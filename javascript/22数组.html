@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        /**
+         * 数组是一种内置对象
+        */
+
+        var arr = new Array();
+        console.log(typeof arr);
+
+        arr[0] = 10;
+        arr[1] = 23;
+        console.log(arr);
+        console.log(arr.length);
+        // 可设置长度
+        arr.length = 10;
+
+        // 字面量创建数组
+        var arr = [1,2,3,4,5,6];
+        arr = new Array(10,20,30);
+        // 创建一个长度为10的数组
+        arr = new Array(10);
+        console.log(arr);
+
+        // 元素可以是任意的数据类型，也可以是函数
+        arr = [
+            {name:"zs"},
+            "hello",
+            true,
+            null,
+            undefined
+        ]        
+    
+        /*
+        数组方法
+        */ 
+        arr.push('elem');
+        arr.pop();
+        // 向数组头部添加元素
+        arr.unshift("head");
+        // 删除头部元素
+        arr.shift();
+        console.log(arr);
+        // 截取数组，返回一个新数组，第二个参数可以省略
+        // 可以传递一个负值，-1倒数第一，-2倒数第二
+        var result = arr.slice(1,2);
+        // 删除数组中指定元素，(索引, 数量，自动插入元素)
+        result = arr.splice(0, 2);
+        console.log("result="+result);
+        
+        /* 
+        数组遍历
+        */    
+        // for (let index = 0; index < array.length; index++) {
+        //     const element = array[index];
+        // }
+        // forEach 需要一个函数作为参数，
+        // 像这种函数，由我们创建但是不由我们调用的，我们称为回调函数
+        // 浏览器会传递三个参数，value元素 index索引 obj遍历的数组
+        arr.forEach(function(value, index, obj){
+            console.log("value="+value);
+            console.log("index="+index);
+        })
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
