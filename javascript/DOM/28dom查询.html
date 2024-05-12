@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript"> 
+        
+        
+        function myClick(idStr, fun) {
+            var btn = document.getElementById(idStr);
+            btn.onclick = fun;
+        }
+
+        window.onload = function() {
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function() {
+                var bj = document.getElementById("bj");
+                alert(bj.innerHTML);
+
+                // 获取bj文本节点
+                var fc = bj.firstChild;
+                alert(fc.nodeValue);
+            };
+
+            // 获取一组标签
+            var btn02 = document.getElementById("btn02");
+            btn02.onclick = function() {
+                // 返回类数组
+                var lis = document.getElementsByTagName("li");
+                for(var i=0;i<lis.length;i++) {
+                    alert(lis[i].innerHTML);
+                }                
+            }
+
+            var btn03 = document.getElementById("btn03");
+            btn03.onclick = function() {
+                var inputs = document.getElementsByName("gender");
+                for(var i=0;i<inputs.length;i++) {
+                    // 读取class属性 需使用 .className
+                    alert(inputs[i].value);
+                }
+            }
+
+            var btn04 = document.getElementById("btn04");
+            btn04.onclick = function() {
+                var city = document.getElementById("city");
+                var lis = city.getElementsByTagName("li");
+                // 返回子节点
+                var cns = city.childNodes;
+                // 返回子元素
+                var cns2 = city.children;
+                alert(lis.length + '\n' + cns.length + '\n' + cns2.length);
+            }
+            
+            //firstChild  获取当前元素第一个子节点
+            //firstElementChild 获取第一个子元素
+            // lastChild
+        
+            myClick("btn05",function() {
+                var bj = document.getElementById("bj");
+                // 父亲节点
+                var pn = bj.parentNode;
+                // 返回元素内部的文本内容
+                alert(pn.innerText);         
+            })
+
+            // 前一个兄弟节点（也可能获取空白的节点） perviousSibling
+            // perviousElementSibling
+        };
+
+
+
+    </script>
+
+
+    <style type="text/css">
+        div.part1 {
+            border: 1px solid;
+            padding: 20px;
+            margin: 20px;
+        }
+        div.part2 {
+            border: 1px solid ;
+            padding: 20px;
+            margin: 20px;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="part1">
+        你喜欢哪个城市？
+        <ul id="city">
+            <li id="bj">北京</li>
+            <li>上海</li>
+            <li>东京</li>
+            <li>首尔</li>
+        </ul>
+        你喜欢哪款单机游戏？
+        <ul>
+            <li>红警</li>
+            <li>实况</li>
+            <li>极品飞车</li>
+            <li>魔兽</li>
+        </ul>
+        你手机的操作系统是？
+        <li>IOS</li>
+        <li>Android</li>
+        <li>Windows Phone</li>
+    </div>
+    
+    <div class="part2">
+        <p>
+            gender:
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female  
+        </p>
+        name:
+        <input type="text">
+    </div>
+
+    
+    <button id="btn01">获取#bj</button>
+    <button id="btn02">按钮2</button>
+    <button id="btn03">按钮3</button>
+    <button id="btn04">按钮4</button>
+    <button id="btn05">按钮5</button>
+
+
+</body> 
+</html>

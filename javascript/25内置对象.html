@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        // 当前时间
+        var d = new Date();
+        console.log(d);
+
+        //  创建一个指定的时间对象
+        var d2 = new Date("12/12/2022 11:11:11");
+        console.log(d2);
+
+        var date = d2.getDate();
+        var day = d2.getDay();
+        // 转换时间戳
+        var time = d2.getTime();
+        console.log(time);
+        // 获取当前时间戳
+        time = Date.now();
+        // 工具类Math
+        console.log(Math.PI);
+
+
+        /**
+         * 封装类
+         * String()
+         * Number()
+         * Boolean()
+         * 
+         *  如果使用基本数据类型的对象，在做比较时可能会出现问题
+         *  不推荐使用
+         * */
+
+        var num = new Number(3);
+        var str = new String("hello");
+        var bool = new Boolean(true);
+        console.log(num, str);
+
+        
+        var s = 123;
+        // 当我们对一些基本数据类型的值去调用属性和方法时，浏览器
+        // 会临时使用包装类将其转换为对象，然后调用对象的属性和方法
+        // 调用完后，再将其转换为基本数据类型
+        s = s.toString();
+        s.hello = "hello";
+
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

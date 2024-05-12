@@ -15,6 +15,8 @@
          *  1. 以函数形式调用，this 是 window
          *  2. 以方法形式调用，谁调用方法this就是谁
          *  3. 当构造函数调用，this是新创建的对象
+         *  4. call() 和 apply() 时，this是传入的对象
+         * 
          * */ 
         function fun(a,b) {
             console.log(this);

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript"> 
+
+        function fun(a,b) {
+            console.log("a="+a);
+            console.log("b="+b);
+            alert(this.name);
+        }
+        /**
+         * 在调用call和apply 可以将一个对象指定为第一个参数
+         * 此时这个对象将成为函数的this
+         * call() 可以将实参在对象之后依次传递
+         * apply() 需要将实参封装到一个数组中统一传递
+         * 
+         * */ 
+        
+        
+         fun.call(obj, 2, 3);
+        fun.apply(obj, [2, 3]);
+
+        var obj = { 
+            name:"obj",
+            sayName: function() {
+                alert(this.name);
+            }
+        };
+
+        var obj2 = { 
+            name:"obj2",
+            sayName: function() {
+                alert(this.name);
+            }
+        };
+
+        obj.sayName.apply(obj2);
+
+
+    </script>
+
+
+</head>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+        #outer {
+            margin: 0 auto;
+        }
+        
+        
+        img {
+            width: 500px;
+            /* height: 200px; */
+        }
+
+    </style>
+
+
+    <script type="text/javascript">
+        window.onload = function() {
+
+            var prev = document.getElementById("prev");
+            var post = document.getElementById("post");
+            var img = document.getElementsByTagName("img")[0];
+            
+            var imgArr = ["/image/animate.jpg", "/image/chuyin.jpg", "/image/star.jpg", "/image/street.jpg"]
+
+            var index = 0;
+            
+            var text = document.getElementsByTagName("p")[0];
+            text.innerHTML = "一共"+ imgArr.length + "张图片，当前第"+ ( index+1 ) +"张";
+            
+            prev.onclick = function() {
+                if(index == 0)
+                    index = imgArr.length;
+                img.src = imgArr[--index];
+                text.innerHTML = "一共"+ imgArr.length + "张图片，当前第"+ ( index+1 ) +"张";
+            }
+            post.onclick = function() {
+                if(index == imgArr.length - 1) 
+                    index = -1;
+                img.src = imgArr[++index];
+                text.innerHTML = "一共"+ imgArr.length + "张图片，当前第"+ ( index+1 ) +"张";                
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <div id="outer">
+        <p></p>
+        <img src="/image/animate.jpg" alt="">
+        <button id="prev">上一张</button>
+        <button id="post">下一张</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        /**
+         * 浏览器在加载一个页面时，是按照自上向下的顺序加载
+         * 
+         * 
+        */
+       
+       /**
+        *  onload事件在整个页面加载完后才触发
+        *  为window绑定一个onload事件
+        *   该事件的响应函数会在页面加载完成后执行
+        */
+       window.onload = function() {
+            var btn = document.getElementById("btn");
+            btn.onclick = function() {
+                alert("hello");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <button id="btn">按钮</button>
+        
+
+</body>
+</html>
