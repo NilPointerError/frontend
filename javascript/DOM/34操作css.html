@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style type="text/css">
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        </style>
+
+    <script type="text/javascript">
+    
+        window.onload = function() {
+            var box1 = document.getElementById("box1");
+            var btn01 = document.getElementById("btn01");
+            btn01.onclick = function() {
+                // 无法读取内部样式，读取的是内联样式
+                // alert(box1.style.width);
+                // 获取当前显示样式 仅IE可用
+                // alert(box1.currentStyle.width);
+            
+                // window的方法 获取当前样式，第一个获取样式的元素， 第二个是伪元素，一般为null
+                // 注意：该方法不设置时会获取默认值
+                // var obj = getComputedStyle(box1, null);
+                // alert(obj.width);
+                // box1.style.width = "300px";
+                // box1.style.height = "300px";
+                // // 有 "-" 修改为驼峰命名法
+                // box1.style.backgroundColor = "yellow";
+                
+                alert(getStyle(box1, "width"));
+
+            };
+
+            // 自定义兼容浏览器的函数
+            function getStyle(obj, name) {
+                if(getComputedStyle) {
+                    return getComputedStyle(obj, null)[name];
+                } else {
+                    return obj.currentStyle[name];
+                }
+            }
+
+
+        }
+    
+    </script>
+
+</head>
+<body>
+
+    <button id="btn01">按钮</button>
+    <div id="box1" style="width: 200px;"></div>
+</body>
+</html> 

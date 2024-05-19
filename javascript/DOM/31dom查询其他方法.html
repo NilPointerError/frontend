@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+
+        window.onload = function() {
+            // 获取body标签
+            // var body = document.getElementsByTagName("body")[0];
+            // console.log(body);
+    
+            /**
+             * 
+             * document自带body、html属性
+             * all代表页面中所有元素
+            */
+            var body = document.body;
+            var html = document.documentElement;
+            var all = document.all;
+            // all = document.getElementsByTagName("*");
+            console.log(body,html,all);
+    
+            // 获取class属性的标签
+            var box1 = document.getElementsByClassName("box1");
+            console.log(box1);
+     
+            /**
+             * 
+             * 需要 css选择器 作为参数查询元素节点
+             * 该方法总会返回唯一的一个元素，有多个返回第一个
+             * document.querySelectorAll返回多个
+             * 
+            */
+            var div = document.querySelector(".box1 div");
+            console.log(div);
+        }
+    </script>
+
+
+</head>
+<body>
+    <div class="box1">
+        <div>222</div>
+    </div>
+</body>
+</html>

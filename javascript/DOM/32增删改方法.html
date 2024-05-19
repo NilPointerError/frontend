@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        window.onload = function() {
+
+            function myClick(idStr, fun) {
+                var btn = document.getElementById(idStr);
+                btn.onclick = fun;
+            };
+
+            myClick("btn01",function(){         
+                // 创建元素节点
+                var li = document.createElement("li");
+                // 创建文本节点
+                var text = document.createTextNode("广州");
+                // 父节点添加子节点
+                li.appendChild(text);
+                var city = document.getElementById("city");
+                city.appendChild(li);
+            });
+
+            myClick("btn02",function(){
+                var li = document.createElement("li");
+                var text = document.createTextNode("广州");
+                li.appendChild(text);
+                var bj = document.getElementById("bj");
+                var city = document.getElementById("city");
+                // parentNode   newNode oldNode
+                city.insertBefore(li, bj);// 插入新节点
+                // city.replaceChild(li, bj);// 替换新节点
+            });
+
+            myClick("btn03",function(){
+                var bj = document.getElementById("bj");
+                var city = document.getElementById("city");
+                // 删除子节点
+                // city.removeChild(bj);
+                bj.parentNode.removeChild(bj);
+            });
+       
+            myClick("btn05",function(){
+                var city = document.getElementById("city");
+                city.innerHTML += "<li>广州</li>";
+            });
+
+        }            
+    </script>
+
+</head>
+<body>
+    <div class="part1">
+        你喜欢哪个城市？
+        <ul id="city">
+            <li id="bj">北京</li>
+            <li>上海</li>
+            <li>东京</li>
+            <li>首尔</li>
+        </ul>
+    </div>
+    <button id="btn01">创建节点</button>
+    <button id="btn02">按钮2</button>
+    <button id="btn03">按钮3</button>
+    <button id="btn04">按钮4</button>
+    <button id="btn05">按钮5</button>
+
+</body>
+</html>
